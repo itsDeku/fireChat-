@@ -1,0 +1,229 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  font-size: 16px;
+  font-family: sans-serif;
+  /* background-color: #FEF1ED; */
+}
+
+button,
+input {
+  cursor: pointer;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #FEF1ED;
+  color: #4c768d;
+  padding-top: 60px;
+}
+.filter-white{
+    filter: brightness(0) invert(1);
+}
+/* navbar */
+.nav-bar {
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F05119;
+  color: #ffffff;
+  height: 60px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.brand {
+  display: flex;
+  margin-left: 50px;
+}
+.brand img {
+  width: 30px;
+  height: 50px;
+}
+.brand h1 {
+  margin-top: 12px;
+    margin-left: 10px;
+    letter-spacing: 5%;
+}
+.sign-in {
+  height: 35px;
+  width: 100px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fdfdfd;
+  border: 2px solid #FEF1EDcc;
+  background-color: #fef1ed00;
+  font-weight: 600;
+  margin-right: 50px;
+}
+.sign-in > img {
+  height: 30px;
+  width: auto;
+}
+.sign-out {
+  height: 35px;
+  width: 100px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fdfdfd;
+  border: 2px solid #FEF1EDcc;
+  background-color: #fef1ed00;
+  font-weight: 600;
+  margin-right: 50px;
+
+}
+
+/* welcome page */
+.welcome {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  padding: 30px;
+  text-align: center;
+  color: #000;
+  background-color: #FEF1ED;
+  background-image: url("./img/large-group-games.jpg");
+  /* background-repeat: ; */
+}
+.welcomeBox {
+  width: 950px;
+  height: 450px;
+  background: #F8F9FA;
+  opacity: 0.99;
+  border-radius: 5px;
+  margin: auto;
+}
+.welcomeBox img{
+  margin-top: 55px;
+  margin-bottom: 12px;
+}
+.welcome h2{
+  font-size: 35px;
+  color: #343a40;
+  margin-bottom: 40px;
+}
+.welcome P {
+  font-size: x-large;
+  color: #343a40;
+  margin-bottom: 40px;
+}
+.welcomeSignIn {
+  width: 230px;
+  height: 50px;
+  background-color: #F05119;
+  border: none;
+  border-radius: 5px;
+  color: #F8F9FA;
+  font-size: 20px;
+}
+/* .welcome :is(h2, p, img) {
+  margin-bottom: 20px;
+} */
+
+/* chat component */
+.chat-box{
+  background: url("./img/pattern.png") ;
+
+}
+.messages-wrapper {
+  padding: 30px;
+  margin-bottom: 60px;
+}
+.chat-bubble {
+  border-radius: 20px 20px 20px 0;
+  padding: 15px;
+  background-color: #F8F9FA;
+  color: #1c2c4c;
+  width: max-content;
+  max-width: calc(100% - 50px);
+  /* box-shadow: -2px 2px 1px 1px #4c768d; */
+  border: 1px solid #1c2c4c29;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.chat-bubble.right {
+  margin-left: auto;
+  border-radius: 20px 20px 0 20px;
+  background-color: #F8F9FA;
+  /* box-shadow: -2px 2px 1px 1px #88dded; */
+}
+.chat-bubble__left {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.user-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #1c2c4c;
+}
+.user-message {
+  word-break: break-all;
+}
+.message-time {
+  display: block;
+  text-align: right;
+}
+
+/* send message */
+.send-message {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 70px;
+  padding: 20px 30px;
+  background-color: #f0a819d5;
+  display: flex;
+  border-radius: 5px 5px 0 0;
+
+}
+.send-message > input {
+  position: relative;
+  bottom: 5px;
+  height: 40px;
+  padding: 10px 10px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  flex-grow: 1;
+  background-color: white;
+  color: #1c2c4c;
+  font-size: 1rem;
+  margin-right: 15px;
+}
+.send-message > input::placeholder {
+  color: #1c2c4c8b;
+}
+.send-message > :is(input, button):focus {
+  outline: none;
+  border-bottom: 1px solid #FEF1EDb3;
+}
+.send-message > button {
+  position: relative;
+  bottom: 5px;
+  width: 130px;
+  height: 40px;
+  padding: 5px 10px;
+  border-radius: 0 5px 5px 0;
+  color: #fff;
+  /* border: 3px solid #fff; */
+  border: none;
+  background-color: #F05119;
+  font-weight: 600;
+  font-size: 16px;
+}
