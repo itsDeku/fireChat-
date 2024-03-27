@@ -5,6 +5,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/src/firebase.js
 
 # testing
 /coverage
@@ -33,6 +34,7 @@ yarn-error.log*
 # Node artifact files
 node_modules/
 dist/
+src/firebase
 
 # Compiled Java class files
 *.class

@@ -9,12 +9,12 @@
     --loginContHeight : 600px;
     --loginContWeight : 900px;
 }
-.loginBody {
+.signupBody {
     background-image: url("./img/LoginBody.svg");
     width: 100vw;
     height: 100vh;
 }
-.loginContainer {
+.signupContainer {
     position: relative;
     display: flex;
     top: calc(50% - var(--loginContHeight) / 2);
@@ -23,35 +23,35 @@
     background: var(--white);
     margin: auto;
 }
-.loginImg {
+.signupImg {
     background-image: url("../img/character-set.png");
     width: calc(var(--loginContWeight) / 2);
     height: inherit;
 }
-.loginContent {
+.signupContent {
     background-color: var(--white);
     width: calc(var(--loginContWeight) / 2);
     height: inherit;
     font-family: "Roboto", sans-serif;
     padding-left: 55px;
 }
-.loginContent > img {
+.signupContent > img {
     position: relative;
     left: calc(100% - (33px + 20px));
     top: 20px;
 }
 
-.loginContent > h1 {
-    margin-top: 50px;
+.signupContent > h1 {
+    margin-top: 30px;
     letter-spacing: 1px;
     font-weight: 300;
     font-size: 30px;
     color: var(--black);
 }
-.loginContent span {
+.signupContent span {
     font-weight: 400;
 }
-.loginContent > h3 {
+.signupContent > h3 {
     margin-top: 15px;
     letter-spacing: 1px;
     font-weight: 300;
@@ -87,11 +87,11 @@
     border-radius: 0 2px 2px 0;
 
 }
-.inputbox > input::placeholder{
-    color: rgb(52, 58, 64,.4);
-}
 .inputbox > input:focus{
     outline: none;
+}
+.inputbox > input::placeholder{
+    color: rgb(52, 58, 64,.4);
 }
 
 .rememberMe{
@@ -118,7 +118,7 @@
 }
 
 .authBtn > button{
-    width: 150px;
+    width: 350px;
     height: 50px;
     letter-spacing: 1px;
     font-size: 20px;
@@ -134,22 +134,5 @@
     background-color: var(--white);
 }
 
-.googleSignin {
-    margin-top: 25px;
-    margin-left: calc(125px - 55px);
-    background: #fff;
-    width: 200px;
-    height: 35px;
-    border-radius: 15px;
-    color: var(--black);
-}
-.googleSignin > img {
-    position: relative;
-    top: 2.5px;
-}
-.googleSignin > span {
-    font-size: 16px ;
-    font-weight: 400;
-    margin-left: 10px;
-}
+
 
