@@ -3,14 +3,11 @@ import GoogleSignin from "../img/btn_google_signin_dark_pressed_web.png";
 import { auth } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
-  const [user] = useAuthState(auth);
-
-  const googleSignIn = () => {
-    const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider);
-  };
+  const navigate = useNavigate();
+  const [user,] = useAuthState(auth);
 
   const signOut = () => {
     auth.signOut();
@@ -28,7 +25,7 @@ const NavBar = () => {
         </button>
         
       ) : (
-        <button className="sign-in" onClick={googleSignIn} type="button">Log In
+        <button className="sign-in" onClick={()=>navigate("/login")} type="button">Log In
           {/* <img
             onClick={googleSignIn}
             src={GoogleSignin} 

@@ -9,7 +9,8 @@ const Message = ({ message }) => {
       className={`chat-bubble ${message.uid === user.uid ? "right" : ""}`}>
       <img
         className="chat-bubble__left"
-        src={message.avatar}
+        // src={message.avatar?}
+        src="./user-profile.svg"
         alt="user avatar"
       />
       <div className="chat-bubble__right">
